@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Computación en Red - P1</title>
+	<style>
+		.button {
+			border: none;
+			color: white;
+			width: 128px;
+			height: 64px;
+			/*padding: 16px 32px;*/
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			-webkit-transition-duration: 0.4s; /* Safari */
+			transition-duration: 0.4s;
+			cursor: pointer;
+		}
+
+		.buttonMedia {
+			color: black; 
+			border: 2px solid rgb(80, 255, 80);
+		}
+
+		.buttonMedia:hover {
+			background-color: rgb(80, 255, 80);
+			color: white;
+		}
+
+		.buttonUmbral {
+			color: black; 
+			border: 2px solid rgb(80, 80, 255);
+		}
+
+		.buttonUmbral:hover {
+			background-color: rgb(80, 80, 255);
+			color: white;
+		}
+		
+		.buttonUmbralAlarma {
+			color: black; 
+			border: 2px solid rgb(255, 128, 128);
+		}
+
+		.buttonUmbralAlarma:hover {
+			background-color: rgb(255, 128, 128);
+			color: white;
+		}
+		
+		.buttonGrafica {
+			color: black; 
+			border: 2px solid rgb(255, 80, 80);
+		}
+
+		.buttonGrafica:hover {
+			background-color: rgb(255, 80, 80);
+			color: white;
+		}
+	</style>
+	<!-- <script charset="UTF-8" src="//cdn.sendpulse.com/js/push/231ade6dd6fcd42db96e20da8c62be18_0.js" async></script> -->
+</head>
+
+<body style="background-color: rgba(10, 10, 10, 0.1)">
+	<header style="color:black;padding:0.5px;">
+		<h1 align="center">Computación en Red: Práctica 1</h1>
+		<h4 align="center">Juan Manuel Vera Díaz</h4>
+	</header>
+	<section>
+		<nav style="float: left;width: 20%; height: 600px;color:black;">
+			<form action="." method="POST">
+				<input class="button buttonMedia" type= "submit" name="boton" value="Media">
+				<input class="button buttonGrafica" type= "submit" name="boton" value="Grafica">
+				<input class="button buttonUmbral" type= "submit" name="boton" value="Umbral">
+				<input type="text" name="UmbralText">
+				<!-- 
+				<input class="button buttonUmbralAlarma" type= "submit" name="boton" value="Alarma">
+				<input type="text" name="UmbralAlarma">
+				-->
+			</form>
+		</nav>
+		<article style="float: left;width: 5%; height: 500px;color:black;">
+			<span>
+				{% for clic in clics %}
+					<p align= left > Clics: {{ clic }}</p>
+				{% endfor %}
+			</span>
+		</article>
+		<article style="float: left;width: 5%; height: 500px;color:black;">
+			<span>
+				{% for meneo in meneos %}
+					<p align= left > Meneos: {{ meneo }}</p>
+				{% endfor %}
+			</span>
+		</article>
+		<article style="float: left;width: 40%; height: 500px;color:black;">
+			<span>
+				{% for noticia in noticias %}
+					<p align= left > Noticia: {{ noticia }}</p>
+				{% endfor %}
+			</span>
+		</article>
+		<article style="float: left;width: 10%; height: 500px;color:black;">
+			<span>
+				{% for hora in horas %}
+					<p align= left > Hora: {{ hora }}</p>
+				{% endfor %}
+			</span>
+		</article>
+		<article style="float: left;width: 20%; height: 500px;color:black;">
+			<span>
+				{% for fecha in fechas %}
+					<p align= left > Fecha: {{ fecha }}</p>
+				{% endfor %}
+			</span>
+		</article>
+		<article style="float: left;width: 80%; height: 100px;color:black;">
+			{% if summaryNews %}
+				<p align= center >{{ summaryNews }}</p>
+			{% endif %}
+		</article>
+	</section>
+</body>
+
+</html>
