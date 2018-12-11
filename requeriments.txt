@@ -1,0 +1,7 @@
+flask
+flask-script
+numpy
+pymongo
+beebotte
+urllib
+
