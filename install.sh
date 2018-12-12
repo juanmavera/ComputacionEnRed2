@@ -55,8 +55,8 @@ cd ~
 
 mkdir duckdns
 
-mv ~/app/duck.sh ~/duckdns/
-mv ~/app/duck_daemon.sh ~/duckdns/
+sudo mv ~/app/ComputacionEnRed2/duck.sh ~/duckdns/
+mv ~/app/ComputacionEnRed2/duck_daemon.sh ~/duckdns/
 
 cd duckdns
 
